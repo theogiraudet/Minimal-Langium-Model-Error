@@ -1,0 +1,47 @@
+{
+  "name": "test",
+  "scopeName": "source.test",
+  "fileTypes": [
+    ".test"
+  ],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "name": "keyword.control.test",
+      "match": "\\b(model)\\b"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.test",
+          "begin": "//\\*",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.test"
+            }
+          },
+          "end": "\\*/",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.comment.test"
+            }
+          }
+        },
+        {
+          "begin": "//",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.whitespace.comment.leading.test"
+            }
+          },
+          "end": "(?=$)",
+          "name": "comment.line.test"
+        }
+      ]
+    }
+  }
+}
